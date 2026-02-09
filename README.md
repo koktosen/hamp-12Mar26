@@ -6,6 +6,7 @@ Static HTML landing page for the **Digital Shield** private security briefing ev
 
 - **index.html** — Main page (served at site root on Netlify)
 - **hampton-event-12mar26.html** — Same content, named copy
+- **assets/** — Favicon and hero banner image
 
 No build step or dependencies. Uses Google Fonts (loaded from CDN).
 

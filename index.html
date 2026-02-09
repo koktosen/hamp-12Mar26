@@ -4,6 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Digital Shield — Private Security Briefing</title>
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="assets/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="assets/favicon-32x32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="assets/site.webmanifest">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -391,9 +396,43 @@
     50% { opacity: 0.3; }
   }
 
+  /* Hero banner */
+  .hero-banner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-height: 280px;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards 0.1s;
+  }
+  .hero-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    object-position: center 30%;
+  }
+
+  /* Optional: supporting image block (e.g. below intro text) */
+  .supporting-image {
+    margin: 32px 0 40px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards 0.65s;
+  }
+  .supporting-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    vertical-align: middle;
+  }
+
   /* Responsive */
   @media (max-width: 640px) {
     .container { padding: 40px 20px 60px; }
+    .hero-banner { max-height: 180px; }
     .stat-banner { grid-template-columns: 1fr; }
     .tactics-grid { grid-template-columns: 1fr; }
     .event-meta { flex-direction: column; align-items: flex-start; gap: 20px; }
@@ -402,6 +441,11 @@
 </style>
 </head>
 <body>
+
+<!-- IMAGE: Hero banner — full-width at top. File: assets/hero-banner.png -->
+<header class="hero-banner" aria-hidden="true">
+  <img src="assets/hero-banner.png" alt="" width="1200" height="400" loading="eager" decoding="async">
+</header>
 
 <div class="container">
 
@@ -418,6 +462,13 @@
   <p class="body-text">
     Households earning $200K+ are the most targeted income group for identity theft. <strong>Over 25% of ultra-high-net-worth families have already been hit by a cyberattack.</strong> Criminals don't need to be sophisticated — they just need you to be convenient. They scrape your data from public records, broker sites, and social media, then use AI to clone your voice from a 3-second clip, spoof your email, or impersonate your bank. The tools have changed. The target hasn't. <strong>This briefing shows you exactly how they do it — and what you can do today to make yourself a harder target.</strong>
   </p>
+
+  <!-- IMAGE: Optional supporting visual. Put file in assets/ and set src below. -->
+  <!--
+  <div class="supporting-image">
+    <img src="assets/your-image.png" alt="Description for accessibility" width="820" height="400" loading="lazy">
+  </div>
+  -->
 
   <div class="stat-banner">
     <div class="stat-item">
