@@ -25,6 +25,6 @@
 | `apple-touch-icon.png` | iOS home screen |
 | `android-chrome-192x192.png`, `android-chrome-512x512.png` | Android / PWA (via manifest) |
 | `site.webmanifest` | PWA manifest (name, icons) |
-| `hero-banner.png` | Hero image at top of page |
+| `hero-banner.png` | Not used (optional; was top banner) |
 
 Add any other images (e.g. `your-image.png`) here and reference them in the HTML as `src="assets/your-image.png"`.
